@@ -13,9 +13,6 @@ Learn more about Ubuntu: <https://ubuntu.com/>
 
 ## Supported Boxes and Respective Packer Template Links
 
--   [`alvistack/devel-22.10`](https://app.vagrantup.com/alvistack/boxes/devel-22.10)
-    -   [`packer/devel-22.10-libvirt/packer.json`](https://github.com/alvistack/vagrant-devel/blob/master/packer/devel-22.10-libvirt/packer.json)
-    -   [`packer/devel-22.10-virtualbox/packer.json`](https://github.com/alvistack/vagrant-devel/blob/master/packer/devel-22.10-virtualbox/packer.json)
 -   [`alvistack/devel-22.04`](https://app.vagrantup.com/alvistack/boxes/devel-22.04)
     -   [`packer/devel-22.04-libvirt/packer.json`](https://github.com/alvistack/vagrant-devel/blob/master/packer/devel-22.04-libvirt/packer.json)
     -   [`packer/devel-22.04-virtualbox/packer.json`](https://github.com/alvistack/vagrant-devel/blob/master/packer/devel-22.04-virtualbox/packer.json)
