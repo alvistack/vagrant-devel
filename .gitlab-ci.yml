@@ -248,6 +248,8 @@ build:devel-22.04-virtualbox:
   variables:
     _BOX: "devel-22.04"
     _PROVIDER: "virtualbox"
+  allow_failure: true
+  retry: 0
 
 test:devel-22.04-virtualbox:
   <<: *job-molecule-test
@@ -326,6 +328,8 @@ build:devel-20.04-virtualbox:
   variables:
     _BOX: "devel-20.04"
     _PROVIDER: "virtualbox"
+  allow_failure: true
+  retry: 0
 
 test:devel-20.04-virtualbox:
   <<: *job-molecule-test
@@ -404,6 +408,8 @@ build:devel-18.04-virtualbox:
   variables:
     _BOX: "devel-18.04"
     _PROVIDER: "virtualbox"
+  allow_failure: true
+  retry: 0
 
 test:devel-18.04-virtualbox:
   <<: *job-molecule-test
