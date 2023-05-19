@@ -249,7 +249,7 @@ build:devel-22.04-virtualbox:
     _BOX: "devel-22.04"
     _PROVIDER: "virtualbox"
   needs:
-    - deploy:devel-22.04-libvirt
+    - build:devel-22.04-libvirt
 
 test:devel-22.04-virtualbox:
   <<: *job-molecule-test
@@ -329,7 +329,7 @@ build:devel-20.04-virtualbox:
     _BOX: "devel-20.04"
     _PROVIDER: "virtualbox"
   needs:
-    - deploy:devel-20.04-libvirt
+    - build:devel-20.04-libvirt
 
 test:devel-20.04-virtualbox:
   <<: *job-molecule-test
@@ -409,7 +409,7 @@ build:devel-18.04-virtualbox:
     _BOX: "devel-18.04"
     _PROVIDER: "virtualbox"
   needs:
-    - deploy:devel-18.04-libvirt
+    - build:devel-18.04-libvirt
 
 test:devel-18.04-virtualbox:
   <<: *job-molecule-test
