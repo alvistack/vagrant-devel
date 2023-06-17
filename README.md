@@ -28,9 +28,6 @@ Learn more about Ubuntu: <https://ubuntu.com/>
 -   [`alvistack/devel-20.04`](https://app.vagrantup.com/alvistack/boxes/devel-20.04)
     -   [`packer/devel-20.04-libvirt/packer.json`](https://github.com/alvistack/vagrant-devel/blob/master/packer/devel-20.04-libvirt/packer.json)
     -   [`packer/devel-20.04-virtualbox/packer.json`](https://github.com/alvistack/vagrant-devel/blob/master/packer/devel-20.04-virtualbox/packer.json)
--   [`alvistack/devel-18.04`](https://app.vagrantup.com/alvistack/boxes/devel-18.04)
-    -   [`packer/devel-18.04-libvirt/packer.json`](https://github.com/alvistack/vagrant-devel/blob/master/packer/devel-18.04-libvirt/packer.json)
-    -   [`packer/devel-18.04-virtualbox/packer.json`](https://github.com/alvistack/vagrant-devel/blob/master/packer/devel-18.04-virtualbox/packer.json)
 
 ## Overview
 
