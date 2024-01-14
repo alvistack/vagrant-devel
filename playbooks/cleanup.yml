@@ -84,9 +84,9 @@
         - { name: "apache2.service" }
         - { name: "gitlab-runner.service" }
         - { name: "mariadb.service" }
-        - { name: "php7.4-fpm.service" }
-        - { name: "php8.0-fpm.service" }
         - { name: "php8.1-fpm.service" }
+        - { name: "php8.2-fpm.service" }
+        - { name: "php8.3-fpm.service" }
         - { name: "postgresql.service" }
       changed_when: false
       failed_when: false
