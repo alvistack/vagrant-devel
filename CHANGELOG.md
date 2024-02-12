@@ -2,6 +2,7 @@
 
 ## YYYYMMDD.Y.Z - TBC
 
+-   Remove Ubuntu 20.04 support
 -   Support AlmaLinux 8
 -   Support AlmaLinux 9
 -   Replace OBS repo from CentOS_8_Stream with AlmaLinux_8
