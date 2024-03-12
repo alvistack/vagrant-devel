@@ -1,5 +1,4 @@
 ---
-
 # Copyright 2024 Wong Hoi Sing Edison <hswong3i@pantarei-design.com>
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,7 +19,7 @@
   become: true
   tasks:
     - name: include default variables
-      ansible.builtin.include_vars: "./vars/main.yml"
+      ansible.builtin.include_vars: ./vars/main.yml
 
     - name: include release specific variables
       ansible.builtin.include_vars: "{{ _loop_var }}"
@@ -37,7 +36,7 @@
             - "{{ ansible_os_family | lower }}-{{ ansible_distribution_major_version | lower }}.yml"
             - "{{ ansible_os_family | lower }}.yml"
           paths:
-            - "./vars"
+            - ./vars
           skip: true
 
     - name: include release specific tasks
@@ -55,11 +54,11 @@
             - "{{ ansible_os_family | lower }}-{{ ansible_distribution_major_version | lower }}.yml"
             - "{{ ansible_os_family | lower }}.yml"
           paths:
-            - "./tasks"
+            - ./tasks
           skip: true
 
     - name: include default tasks
-      ansible.builtin.include_tasks: "./tasks/main.yml"
+      ansible.builtin.include_tasks: ./tasks/main.yml
 
     - name: include role
       ansible.builtin.include_role:
@@ -209,22 +208,22 @@
         name: "{{ item.name }}"
         groups: "{{ item.groups }}"
         append: true
-        state: "present"
+        state: present
       loop:
-        - { name: "vagrant", groups: "kvm" }
-        - { name: "vagrant", groups: "libvirt" }
+        - { name: vagrant, groups: kvm }
+        - { name: vagrant, groups: libvirt }
 
     - name: sudo -u vagrant vagrant plugin install vagrant-libvirt
       become: true
-      become_user: "vagrant"
+      become_user: vagrant
       environment:
-        PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+        PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
       ansible.builtin.shell:
         cmd: |
           set -euxo pipefail
           vagrant plugin install vagrant-libvirt
       args:
-        executable: "/bin/bash"
+        executable: /bin/bash
       register: result
       until: result is succeeded
       changed_when: result is not succeeded
@@ -238,9 +237,9 @@
         name: "{{ item.name }}"
         groups: "{{ item.groups }}"
         append: true
-        state: "present"
+        state: present
       loop:
-        - { name: "vagrant", groups: "vboxusers" }
+        - { name: vagrant, groups: vboxusers }
 
     - name: include role
       ansible.builtin.include_role:
