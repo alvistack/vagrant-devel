@@ -2,6 +2,9 @@
 
 ## YYYYMMDD.Y.Z - TBC
 
+## 20240328.1.1 - 2024-03-28
+
+-   Support Ansible community package 9.4.0
 -   Remove Ubuntu 20.04 support
 -   Support AlmaLinux 8
 -   Support AlmaLinux 9
