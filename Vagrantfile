@@ -1,6 +1,6 @@
 Vagrant.configure("2") do |config|
-  config.vm.hostname = "devel-22.04"
-  config.vm.box = "alvistack/devel-22.04"
+  config.vm.hostname = "devel-24.04"
+  config.vm.box = "alvistack/devel-24.04"
   config.vm.box_check_update = true
 
   config.vm.provider :virtualbox do |virtualbox, override|

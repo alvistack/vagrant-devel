@@ -199,6 +199,86 @@ default:
     - *script-linters
   retry: 2
 
+build:devel-24.04-libvirt:
+  <<: *job-packer-build
+  stage: build
+  cache:
+    key: $CI_PIPELINE_ID-devel-24.04-libvirt
+    paths:
+      - packer/*/output-vagrant
+  variables:
+    _BOX: devel-24.04
+    _PROVIDER: libvirt
+
+test:devel-24.04-libvirt:
+  <<: *job-molecule-test
+  stage: test
+  cache:
+    key: $CI_PIPELINE_ID-devel-24.04-libvirt
+    paths:
+      - packer/*/output-vagrant
+    policy: pull
+  variables:
+    _BOX: devel-24.04
+    _PROVIDER: libvirt
+  needs:
+    - build:devel-24.04-libvirt
+
+deploy:devel-24.04-libvirt:
+  <<: *job-vagrant-cloud-provider-upload
+  stage: deploy
+  cache:
+    key: $CI_PIPELINE_ID-devel-24.04-libvirt
+    paths:
+      - packer/*/output-vagrant
+    policy: pull
+  variables:
+    _BOX: devel-24.04
+    _PROVIDER: libvirt
+  needs:
+    - test:devel-24.04-libvirt
+
+build:devel-24.04-virtualbox:
+  <<: *job-packer-build
+  stage: build
+  cache:
+    key: $CI_PIPELINE_ID-devel-24.04-virtualbox
+    paths:
+      - packer/*/output-vagrant
+  variables:
+    _BOX: devel-24.04
+    _PROVIDER: virtualbox
+  needs:
+    - build:devel-24.04-libvirt
+
+test:devel-24.04-virtualbox:
+  <<: *job-molecule-test
+  stage: test
+  cache:
+    key: $CI_PIPELINE_ID-devel-24.04-virtualbox
+    paths:
+      - packer/*/output-vagrant
+    policy: pull
+  variables:
+    _BOX: devel-24.04
+    _PROVIDER: virtualbox
+  needs:
+    - build:devel-24.04-virtualbox
+
+deploy:devel-24.04-virtualbox:
+  <<: *job-vagrant-cloud-provider-upload
+  stage: deploy
+  cache:
+    key: $CI_PIPELINE_ID-devel-24.04-virtualbox
+    paths:
+      - packer/*/output-vagrant
+    policy: pull
+  variables:
+    _BOX: devel-24.04
+    _PROVIDER: virtualbox
+  needs:
+    - test:devel-24.04-virtualbox
+
 build:devel-22.04-libvirt:
   <<: *job-packer-build
   stage: build
