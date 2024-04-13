@@ -9,7 +9,7 @@ tag](https://img.shields.io/github/tag/alvistack/vagrant-devel.svg)](https://git
 [![GitHub
 license](https://img.shields.io/github/license/alvistack/vagrant-devel.svg)](https://github.com/alvistack/vagrant-devel/blob/master/LICENSE)
 [![Vagrant Box
-download](https://img.shields.io/badge/dynamic/json?label=alvistack%2Fdevel-22.04&query=%24.boxes%5B%3A1%5D.downloads&url=https%3A%2F%2Fapp.vagrantup.com%2Fapi%2Fv1%2Fsearch%3Fq%3Dalvistack%2Fdevel-22.04)](https://app.vagrantup.com/alvistack/boxes/devel-22.04)
+download](https://img.shields.io/badge/dynamic/json?label=alvistack%2Fdevel-24.04&query=%24.boxes%5B%3A1%5D.downloads&url=https%3A%2F%2Fapp.vagrantup.com%2Fapi%2Fv1%2Fsearch%3Fq%3Dalvistack%2Fdevel-24.04)](https://app.vagrantup.com/alvistack/boxes/devel-24.04)
 
 Ubuntu is a Debian-based Linux operating system that runs from the
 desktop to the cloud, to all your internet connected things. It is the
@@ -22,6 +22,9 @@ Learn more about Ubuntu: <https://ubuntu.com/>
 
 ## Supported Boxes and Respective Packer Template Links
 
+-   [`alvistack/devel-24.04`](https://app.vagrantup.com/alvistack/boxes/devel-24.04)
+    -   [`packer/devel-24.04-libvirt/packer.json`](https://github.com/alvistack/vagrant-devel/blob/master/packer/devel-24.04-libvirt/packer.json)
+    -   [`packer/devel-24.04-virtualbox/packer.json`](https://github.com/alvistack/vagrant-devel/blob/master/packer/devel-24.04-virtualbox/packer.json)
 -   [`alvistack/devel-22.04`](https://app.vagrantup.com/alvistack/boxes/devel-22.04)
     -   [`packer/devel-22.04-libvirt/packer.json`](https://github.com/alvistack/vagrant-devel/blob/master/packer/devel-22.04-libvirt/packer.json)
     -   [`packer/devel-22.04-virtualbox/packer.json`](https://github.com/alvistack/vagrant-devel/blob/master/packer/devel-22.04-virtualbox/packer.json)
@@ -51,7 +54,7 @@ commands under your [project
 directory](https://learn.hashicorp.com/tutorials/vagrant/getting-started-project-setup?in=vagrant/getting-started):
 
     # Initialize Vagrant
-    vagrant init alvistack/devel-22.04
+    vagrant init alvistack/devel-24.04
 
     # Start the virtual machine
     vagrant up
@@ -69,8 +72,8 @@ You could also run our
 have [Vagrant](https://www.vagrantup.com/) and
 [Libvirt](https://libvirt.org/) installed, e.g.
 
-    # Run Molecule on Ubuntu 22.04
-    molecule converge -s devel-22.04-libvirt
+    # Run Molecule on Ubuntu 24.04
+    molecule converge -s devel-24.04-libvirt
 
 Please refer to [.gitlab-ci.yml](.gitlab-ci.yml) for more information on
 running Molecule.
