@@ -22,29 +22,29 @@ Learn more about Ubuntu: <https://ubuntu.com/>
 
 ## Supported Boxes and Respective Packer Template Links
 
--   [`alvistack/devel-24.04`](https://app.vagrantup.com/alvistack/boxes/devel-24.04)
-    -   [`packer/devel-24.04-libvirt/packer.json`](https://github.com/alvistack/vagrant-devel/blob/master/packer/devel-24.04-libvirt/packer.json)
-    -   [`packer/devel-24.04-virtualbox/packer.json`](https://github.com/alvistack/vagrant-devel/blob/master/packer/devel-24.04-virtualbox/packer.json)
--   [`alvistack/devel-22.04`](https://app.vagrantup.com/alvistack/boxes/devel-22.04)
-    -   [`packer/devel-22.04-libvirt/packer.json`](https://github.com/alvistack/vagrant-devel/blob/master/packer/devel-22.04-libvirt/packer.json)
-    -   [`packer/devel-22.04-virtualbox/packer.json`](https://github.com/alvistack/vagrant-devel/blob/master/packer/devel-22.04-virtualbox/packer.json)
+- [`alvistack/devel-24.04`](https://app.vagrantup.com/alvistack/boxes/devel-24.04)
+  - [`packer/devel-24.04-libvirt/packer.json`](https://github.com/alvistack/vagrant-devel/blob/master/packer/devel-24.04-libvirt/packer.json)
+  - [`packer/devel-24.04-virtualbox/packer.json`](https://github.com/alvistack/vagrant-devel/blob/master/packer/devel-24.04-virtualbox/packer.json)
+- [`alvistack/devel-22.04`](https://app.vagrantup.com/alvistack/boxes/devel-22.04)
+  - [`packer/devel-22.04-libvirt/packer.json`](https://github.com/alvistack/vagrant-devel/blob/master/packer/devel-22.04-libvirt/packer.json)
+  - [`packer/devel-22.04-virtualbox/packer.json`](https://github.com/alvistack/vagrant-devel/blob/master/packer/devel-22.04-virtualbox/packer.json)
 
 ## Overview
 
--   Packaging with [Packer](https://www.packer.io/)
--   Minimal [Vagrant base box
-    implementation](https://www.vagrantup.com/docs/boxes/base)
--   Support [QEMU Guest
-    Agent](https://wiki.qemu.org/Features/GuestAgent)
--   Support [VirtualBox Guest
-    Additions](https://www.virtualbox.org/manual/ch04.html)
--   Support [Vagrant synced folder with
-    rsync](https://www.vagrantup.com/docs/synced-folders/rsync)
--   Support [Vagrant provisioner with
-    Ansible](https://www.vagrantup.com/docs/provisioning/ansible)
--   Standardize disk partition with GPT
--   Standardize file system mount with UUID
--   Standardize network interface with `eth0`
+- Packaging with [Packer](https://www.packer.io/)
+- Minimal [Vagrant base box
+  implementation](https://www.vagrantup.com/docs/boxes/base)
+- Support [QEMU Guest
+  Agent](https://wiki.qemu.org/Features/GuestAgent)
+- Support [VirtualBox Guest
+  Additions](https://www.virtualbox.org/manual/ch04.html)
+- Support [Vagrant synced folder with
+  rsync](https://www.vagrantup.com/docs/synced-folders/rsync)
+- Support [Vagrant provisioner with
+  Ansible](https://www.vagrantup.com/docs/provisioning/ansible)
+- Standardize disk partition with GPT
+- Standardize file system mount with UUID
+- Standardize network interface with `eth0`
 
 ### Quick Start
 
@@ -96,12 +96,12 @@ latest packages provided by the base image project.
 
 ## License
 
--   Code released under [Apache License 2.0](LICENSE)
--   Docs released under [CC BY
-    4.0](http://creativecommons.org/licenses/by/4.0/)
+- Code released under [Apache License 2.0](LICENSE)
+- Docs released under [CC BY
+  4.0](http://creativecommons.org/licenses/by/4.0/)
 
 ## Author Information
 
--   Wong Hoi Sing Edison
-    -   <https://twitter.com/hswong3i>
-    -   <https://github.com/hswong3i>
+- Wong Hoi Sing Edison
+  - <https://twitter.com/hswong3i>
+  - <https://github.com/hswong3i>
