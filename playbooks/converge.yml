@@ -167,6 +167,33 @@
       ansible.builtin.include_role:
         name: packer
 
+    - name: sudo -u vagrant packer plugins install
+      become: true
+      become_user: vagrant
+      environment:
+        PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+      ansible.builtin.shell:
+        cmd: |
+          set -euxo pipefail
+          packer plugins {{ item.state }} {{ item.name }}
+      args:
+        executable: /bin/bash
+      loop:
+        - { state: install, name: github.com/hashicorp/amazon }
+        - { state: install, name: github.com/hashicorp/ansible }
+        - { state: install, name: github.com/hashicorp/azure }
+        - { state: install, name: github.com/hashicorp/docker }
+        - { state: install, name: github.com/hashicorp/googlecompute }
+        - { state: install, name: github.com/hashicorp/qemu }
+        - { state: install, name: github.com/hashicorp/vagrant }
+        - { state: install, name: github.com/hashicorp/virtualbox }
+        - { state: install, name: github.com/hashicorp/vmware }
+        - { state: install, name: github.com/hashicorp/vsphere }
+        - { state: install, name: github.com/thomasklein94/libvirt }
+      register: result
+      until: result is succeeded
+      changed_when: result is not succeeded
+
     - name: include role
       ansible.builtin.include_role:
         name: vagrant
