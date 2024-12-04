@@ -15,4 +15,4 @@
 # limitations under the License.
 
 # ansible
-ansible_release: "9.12"
+ansible_release: "9.13"
