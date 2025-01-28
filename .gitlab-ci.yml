@@ -268,7 +268,7 @@ build:devel-24.04-virtualbox:
     _PROVIDER: virtualbox
     _ARCHITECTURE: amd64
   needs:
-    - build:devel-24.04-libvirt
+    - deploy:devel-24.04-libvirt
 
 test:devel-24.04-virtualbox:
   <<: *job-molecule-test
@@ -354,7 +354,7 @@ build:devel-22.04-virtualbox:
     _PROVIDER: virtualbox
     _ARCHITECTURE: amd64
   needs:
-    - build:devel-22.04-libvirt
+    - deploy:devel-22.04-libvirt
 
 test:devel-22.04-virtualbox:
   <<: *job-molecule-test
